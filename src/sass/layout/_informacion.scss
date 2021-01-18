@@ -1,0 +1,40 @@
+/**INFORMACION**/
+
+.informacion {
+  margin: $separacion auto;
+  .contenido-informacion {
+    @include tablet {
+      @include grid(2, $separacion);
+    }
+  }
+}
+
+.texto-entrada {
+  @include tablet() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+
+    @include tablet() {
+      font-size: 4rem;
+    }
+  }
+
+  span {
+    color: $rosa;
+    font-weight: $bold;
+
+    @include tablet() {
+      font-size: 2rem;
+    }
+  }
+  p {
+    text-align: justify;
+    line-height: 3rem;
+  }
+}

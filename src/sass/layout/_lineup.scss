@@ -1,0 +1,92 @@
+/**LINEUP**/
+
+.lineup {
+  background-color: $rosa;
+
+  h2 {
+    text-align: center;
+    color: $blanco;
+    padding: $separacion 0;
+  }
+
+  .fecha {
+    color: $blanco;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+
+  .lineup-contenedor {
+    padding: $separacion 0;
+    @include tablet() {
+      @include grid(2, $separacion);
+    }
+  }
+}
+
+.nombre-escenario {
+  text-align: center;
+  padding: 2rem 0;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    background-size: 15rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 2.5rem auto 0 auto;
+  }
+}
+
+.lista {
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 2.5rem 2rem;
+    font-weight: $bold;
+    font-size: 1.8rem;
+
+    span {
+      font-weight: $regular;
+    }
+  }
+}
+
+.bg-amarillo .lista {
+  li {
+    &:nth-child(even) {
+      background-color: darken($amarillo, 10);
+    }
+  }
+}
+
+.bg-verde .lista {
+  li {
+    &:nth-child(even) {
+      background-color: darken($verde, 10);
+    }
+  }
+}
+
+.rock .nombre-escenario {
+  &::after {
+    background-image: url(/build/img/icono_rock.png);
+  }
+}
+
+.edm .nombre-escenario {
+  &::after {
+    background-image: url(/build/img/icono_edm.png);
+  }
+}
+
+.bg-amarillo {
+  background-color: $amarillo;
+}
+
+.bg-verde {
+  background-color: $verde;
+}

@@ -1,0 +1,51 @@
+/**GALERÍA**/
+
+.galeria {
+  margin: $separacion auto;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $separacion;
+  }
+
+  .galeria-imagenes {
+    li {
+      list-style: none;
+      padding: 0;
+    }
+
+    padding: 0;
+
+    @include grid(2, 2rem);
+
+    @include tablet {
+      @include grid(4, 2rem);
+    }
+
+    @include desktop {
+      @include grid(6, 2rem);
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-cerrar {
+  background-color: $blanco;
+  padding: 1.5rem 2rem;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  font-weight: $black;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

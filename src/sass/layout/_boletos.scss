@@ -1,0 +1,66 @@
+/*BOLETOS*/
+
+.boletos {
+  background-color: $verde;
+  padding-bottom: $separacion;
+  h2 {
+    text-align: center;
+    color: $blanco;
+    padding: $separacion 0;
+  }
+
+  .contenido-boletos {
+    @include tablet {
+      @include grid(2, $separacion);
+    }
+  }
+}
+
+.tabla {
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  p {
+    text-align: center;
+    color: $blanco;
+    font-size: 3rem;
+  }
+
+  thead {
+    background-color: $rosa;
+
+    th {
+      font-size: 2rem;
+      font-weight: $delgada;
+      color: $blanco;
+      padding: 1rem 0;
+    }
+  }
+  tbody {
+    background-color: $blanco;
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #e1e1e1;
+    }
+
+    tr {
+      &:last-of-type {
+        td {
+          border: none;
+        }
+      }
+    }
+  }
+  tfoot {
+    background-color: $morado;
+
+    td {
+      padding: 1.3rem 0;
+      font-size: 3rem;
+      text-align: center;
+      color: $blanco;
+    }
+  }
+}

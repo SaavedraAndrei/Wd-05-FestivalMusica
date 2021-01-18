@@ -1,0 +1,15 @@
+/*FOOTER*/
+
+.footer {
+  background-color: $rosa;
+
+  .contenedor-footer {
+    p {
+      margin: 0;
+      text-align: center;
+      color: $blanco;
+      padding: 2rem;
+      font-weight: $bold;
+    }
+  }
+}
